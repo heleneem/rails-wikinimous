@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-20 h1">📚</span>
+  </div>
+</nav>
+
+<h1>New Article✍️</h1>
+<div class="container">
+<%= form_with model: @article do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<%= f.label :content %>
+<%= f.text_field :content %>
+<div class= "btn btn-success", id= "editbtn">
+<%= f.submit %>
+<% end %>
+</div>
+</div>

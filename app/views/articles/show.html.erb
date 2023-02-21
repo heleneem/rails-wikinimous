@@ -1,0 +1,17 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-20 h1">📚<em>articles.com</em>📚</span>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="card m-5" style="width: 24rem;" >
+    <h1><%= @article.title%></h1>
+    <h2><%= @article.content %></h2>
+  </div>
+
+<%= link_to "List", articles_path, class: "btn btn-success", id: "editbtn" %>
+<%= link_to 'Edit', edit_article_path(@article), class: "btn btn-success", id: "editbtn"%>
+
+<%= link_to 'delete', article_path(@article), data: {turbo_method: :delete, turbo_confirm: 'Are You Sure?'}, class: "btn btn-success", id: "editbtn" %>
+</div>
